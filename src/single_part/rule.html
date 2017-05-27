@@ -1,0 +1,75 @@
+<html><head>
+<base>
+<meta http-equiv="Content-Type" content="applicationnd.wap.xhtml+xml;charset= UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.3; minimum-scale=1.0; maximum-scale=2.0">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="keywords" content="财汇富">
+<meta name="description" content="纵览行情，明确策略，实时专家互动，知晓天下财经">
+<title>财汇富</title>
+<link href="css/guize.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<!--财汇富规则-->
+<div class="rule_box">
+	<div class="rule_top"><img src="images/intro_img1.jpg"></div>
+  <div class="selectGoods">
+    <div class="gz_tit clearfix bordr-m" id="goods">
+    </div>
+  </div>
+  <iframe src="./haisi.html" frameborder="0" name="iframeNames" id="iframeName"></iframe>	
+	<div class="gz_blo2">
+		<div class="blo2_tit"><img src="images/gz_img1.png"></div>
+		<div><img src="images/gz_img2.png"></div>
+		<div><img src="images/gz_img3.png"></div>
+		<div><img src="images/gz_img4.png"></div>
+		<div><img src="images/gz_img5.png"></div>
+		<div><img src="images/gz_img6.png"></div>		
+	</div>
+	<div class="footer">如有疑问可在微信直接输入问题，在线客服将为您实时解答。</div>
+  <script type="text/javascript">
+    function parseDom(arg) { 
+      var objE = document.createElement("div"); 
+      objE.innerHTML = arg; 
+      return objE.childNodes; 
+    };
+
+    var tpls = [];
+    window.goodsList.map(function(item, i){
+      var i = i+1;
+      good = ['<li id="gz_goods'+i+'" class="" data-no="'+item.url+'" onclick="showGoods('+i+')"><a href="javascript:void('+i+')" >'+item.name+'</a><span class="jiantou" id="jiantou1" ></span></li>'];
+      tpls.push(good);
+    });
+
+    for(var i = 0; i < parseDom(tpls.join('')).length; i++){
+      document.getElementById("goods").appendChild(parseDom(tpls.join(''))[i]); 
+    }    
+
+    document.getElementById("gz_goods1").className="gz_ons";
+
+    var len = document.getElementsByTagName('li').length;
+    var iframes = document.getElementsByTagName('iframe')[0];
+    function showGoods(obj){
+      for (var i = 1; i <= len; i++) {
+        document.getElementById("gz_goods"+i).className="";
+      };
+      document.getElementById("gz_goods"+obj).className="gz_ons";
+
+      var i = obj - 1;
+      iframes.setAttribute("src", window.goodsList[i].url + '.html');
+      setTimeout(function(){
+      var iframeHeight = window.frames["iframeName"].contentDocument.getElementById("goods1").offsetHeight;
+        console.log(iframeHeight)
+        iframes.style.height = iframeHeight + 'px';
+      }, 500);
+    }
+    setTimeout(function(){
+      var iframeHeight = window.frames["iframeName"].contentDocument.getElementById("goods1").offsetHeight;
+      console.log(iframeHeight)
+      iframes.style.height = iframeHeight + 'px';
+    }, 500);
+  </script>
+</div>
+
+</body></html>

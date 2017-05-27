@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <title>热点</title>
+    <link rel="stylesheet" href="css/hot-activity.css">
+</head>
+<body>
+<div id="root">
+    <nav class="hots-activity">
+        <ul class="hots-activity-nav">
+            <li onclick="window.addAcitve(this,1)" class="active">热门活动</li>
+            <li onclick="window.addAcitve(this,2)">投资策略</li>
+            <span class="hots-activity-new">new</span>
+            <li>
+                <div class="hots-activity-msg" onclick="window.goMsg()">
+                    <img src="../images/messageInfo.png" alt="">
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <iframe src="host.html" frameborder="0" id="iframe"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    document.getElementById('iframe').src = 'hots.html' + location.search;
+    function GetParamData() {
+        var str = location.href; // 取得整个地址栏
+        var num = str.indexOf('?');
+        str = str.substr(num + 1); // 取得所有参数   stringvar.substr(start [, length ]
+        var arr = str.split('&'); // 各个参数放到数组里
+        var paramData = {};
+        for (let i = 0; i < arr.length; i += 1) {
+            var n = arr[i].indexOf('=');
+            if (n > 0) {
+                var name = arr[i].substring(0, n);
+                var value = decodeURIComponent(arr[i].substr(n + 1));
+                paramData[name] = value;
+            }
+        }
+        return paramData;
+    }
+    window.ParamData = new GetParamData();
+
+    function formatJsonArgs(args) {
+        var command = {
+            command: args.command,
+            params: args.params ? args.params : {},
+        };
+        return JSON.stringify(command);
+    }
+    function callNative(funName, args) {
+        try {
+            var formatArgs = formatJsonArgs(args);
+            if (typeof (android) === 'undefined') {
+                window.webkit.messageHandlers[funName].postMessage(formatArgs);
+            } else {
+                window.android[funName](formatArgs);
+            }
+        } catch (e) {
+            console.log(`js 调用 native${e}`);
+        }
+    }
+
+    function formatJsonArgs(args) {
+        var command = {
+            command: args.command,
+            params: args.params ? args.params : {},
+        };
+        return JSON.stringify(command);
+    }
+    function callNative(funName, args) {
+        try {
+            var formatArgs = formatJsonArgs(args);
+            if (typeof (android) === 'undefined') {
+                window.webkit.messageHandlers[funName].postMessage(formatArgs);
+            } else {
+                window.android[funName](formatArgs);
+            }
+        } catch (e) {
+            console.log(`js 调用 native${e}`);
+        }
+    }
+    function getQueryString(name) {
+        var reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`, 'i');
+        var r = location.search.substr(1).match(reg);
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null;
+    }
+
+    function goMsg() {
+        callNative(window.executeNative, {
+            command: "view://" + 'msg',
+        });
+    }
+    function addAcitve(obj, idenx) {
+        var nodes = obj.parentNode.childNodes, l = nodes.length;
+        var iframe = document.getElementById('iframe');
+        for (var i = 0; i < l; i++) {
+            if (nodes[i].nodeName === "LI") {
+                nodes[i].removeAttribute('class');
+            }
+        }
+        obj.setAttribute('class', 'active');
+
+        var mUrl = decodeURI(window.ParamData.mUrl) || '';
+
+        if (idenx === 1) {
+            iframe.src = 'hots.html' + location.search;
+        } else {
+            iframe.src = mUrl;
+        }
+    }
+</script>
+</html>

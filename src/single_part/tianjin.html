@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="applicationnd.wap.xhtml+xml;charset= UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.3; minimum-scale=1.0; maximum-scale=2.0">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="keywords" content="财汇富">
+	<meta name="description" content="纵览行情，明确策略，实时专家互动，知晓天下财经">
+	<link href="css/guize.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+
+	function showTable(obj){
+		for( var i=1;i<=4;i++){
+			document.getElementById("tableDiv"+i).style.display="none";
+			document.getElementById("jiantou"+i).style.display="none";
+			document.getElementById("gz_on"+i).className="";
+		}
+		document.getElementById("tableDiv"+obj).style.display="";
+		document.getElementById("jiantou"+obj).style.display="";
+		document.getElementById("gz_on"+obj).className="gz_on";
+		var height = document.getElementById("goods1").clientHeight;
+		window.parent.document.getElementById("iframeName").style.height = height+'px';
+	}
+	</script>
+</head>
+<body>
+	<div class="gz_cont" id="goods1">
+		<div class="gz_tit clearfix">
+			<ul>
+				<li id="gz_on1" class="gz_on"><a href="javascript:void(0)" onclick="showTable(1)">交易规则</a><span class="jiantou" id="jiantou1" ><img src="images/gz_bj2.png"></span></li>
+				<li id="gz_on2" class=""><a href="javascript:void(0)" onclick="showTable(2)">金币规则</a><span class="jiantou" id="jiantou2" style="display: none;"><img src="images/gz_bj2.png"></span></li>
+				<li id="gz_on3" class=""><a href="javascript:void(0)" onclick="showTable(3)">资金规则</a><span class="jiantou" id="jiantou3" style="display:none"><img src="images/gz_bj2.png"></span></li>
+				<li id="gz_on4" class=""><a href="javascript:void(0)" onclick="showTable(4)" class="bor_no">风控规则</a><span class="jiantou" id="jiantou4" style="display:none"><img src="images/gz_bj2.png"></span></li>
+			</ul>
+		</div>
+		<div class="gz_blo1" id="gz_blo1">
+			<!--交易规则-->
+			<div id="tableDiv1" class="tableDiv1">
+  	    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table">
+          	<tbody>
+            <tr>
+              <td width="11%" height="165" rowspan="6" bgcolor="#20447a" style="color:#FFF">红木</td>
+              <th width="14%" align="center" scope="row">交易<br>单位</th>
+              <td colspan="2" align="center">件</td>
+              <th width="14%">报价<br>单位</th>
+              <td colspan="3" align="center">元/件</td>
+            </tr>
+            <tr>
+              <th align="center" scope="row">最小变动单位</th>
+              <td colspan="2" align="center">1元/1件</td>
+              <th width="14%">单笔最大下单</th>
+              <td colspan="3">2笔</td>
+            </tr>      
+            <tr>
+            <th>定金</th>
+              <td width="12%">10</td>
+              <td width="13%">50</td>
+              <td width="14%">100</td>
+              <td width="13%">200</td>
+              <td width="11%">1000</td>
+              <td width="12%">2000</td>
+            </tr>
+            <tr>
+              <th>杠杆</th>
+              <td width="12%">32</td>
+              <td width="13%">32</td>
+              <td width="14%">32</td>
+              <td>64</td>
+              <td>64</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <th>最小波动盈亏</th>
+              <td width="12%">0.05</td>
+              <td width="13%">0.25</td>
+              <td width="14%">0.5</td>
+              <td>2</td>
+              <td>10</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th>手续费</th>
+              <td>0.75</td>
+              <td>3.75</td>
+              <td>7.5</td>
+              <td>30</td>
+              <td>150</td>
+              <td>300</td>
+            </tr>
+          </tbody>
+        	</table>
+	        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table" style=" margin-top:3px;">
+		        <tbody><tr>
+		        </tr></tbody></table>
+		        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table" style=" margin-top:3px;">
+		          <tbody>
+		            <tr>
+		              <td width="11%" rowspan="3" bgcolor="#20447a" style="color:#FFF;">其他<br>规则</td>
+		              <th width="14%">交易<br>时间</th>
+		              <td width="75%" colspan="6">周一至周六09:30-24:00<br>（结算时间04:05-08:00）</td>
+		              </tr>
+		            <tr>
+		              <th>结算平仓</th>
+		              <td colspan="6">由于不允许持仓过夜，因此当客户持仓到结算时间未手动平仓，则系统会为其自动平仓</td>
+		            </tr>
+		            <tr>
+		              <th>持仓过夜</th>
+		              <td colspan="6">无</td>
+		            </tr>
+		          </tbody>
+		        </table>
+			</div>
+			<!--金币规则-->
+			<div id="tableDiv2" class="tableDiv2" style="display: none;">
+	  			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table">
+	  				<tbody>
+		            <tr class="top_title">
+		              <th scope="col" width="20%">&nbsp;</th>
+		              <th scope="col" width="35%">内容</th>
+		              <th scope="col" width="45">说明</th>
+		              </tr>
+		            <tr>
+		              <th rowspan="3" scope="row">获取方式</th>
+		              <td>新用户奖励60元</td>
+		              <td>成功加入</td>
+		            </tr>
+		            <tr>
+		              <td>分享奖励10元</td>
+		              <td>每成功分享1人，得1枚10元金币奖励，上不封顶</td>
+		            </tr>
+		            <tr>
+		              <td>其他获取方式</td>
+		              <td>不定期将举办金币赠送活动</td>
+		            </tr>
+		            <tr>
+		              <th rowspan="2" scope="row">金币特权</th>
+		              <td>免手续费</td>
+		              <td>交易手续费为0</td>
+		            </tr>
+		            <tr>
+		              <td>亏损我买单</td>
+		              <td>金币建仓亏损金额不计入总资产，盈利可提现。</td>
+		            </tr>
+		            <tr>
+		              <th rowspan="4" scope="row">使用规则</th>
+		              <td>价值</td>
+		              <td>10元金币=0.05件红木</td>
+		            </tr>
+		            <tr>
+		              <td>单笔最大下单量</td>
+		              <td>6手</td>
+		            </tr>
+		            <tr>
+		              <td>最小波动盈亏</td>
+		              <td><p>10元每点波动0.05元</p>
+		              <p>100元每点波动0.5元</p></td>
+		            </tr>
+		            <tr>
+		              <td>平仓方式</td>
+		              <td>当日手动平仓</td>
+		            </tr>
+		            <tr>
+		              <th rowspan="3" scope="row">金币盈利</th>
+		              <td colspan="2">通过金币下单取得的盈收</td>
+		            </tr>
+		            <tr>
+		              <td>金币盈利转资产</td>
+		              <td>转资产成功后，金币盈利转入入总资产，资金可提现、可交易。</td>
+		            </tr>
+		            <tr>
+		              <td>申请转资产时间</td>
+		              <td>随时<br>
+		              （完成首笔银联充值后，正常完成3笔现金交易，即可随时申请）</td>
+		            </tr>
+					    </tbody>
+		        </table>
+	      	</div>
+			<!--资金规则-->
+			<div id="tableDiv3" class="tableDiv4" style="display:none;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table">
+					<tbody><tr class="top_title">
+						<th scope="col" width="27%">&nbsp;</th>
+						<th colspan="2" scope="col">充值</th>
+						<th colspan="2" scope="col">提现</th>
+					</tr>
+					<tr>
+						<th scope="row">可选平台</th>
+						<td width="16%">银联</td>
+						<td width="16%">微信</td>
+						<td width="21%">银联</td>
+						<td width="20%">微信</td>
+					</tr>
+					<tr>
+						<th scope="row">手续费</th>
+						<td width="16%">0</td>
+						<td width="16%">0</td>
+						<td width="21%">2元/笔</td>
+						<td width="20%">--</td>
+					</tr>
+					<tr>
+						<th scope="row">单笔最低金额</th>
+						<td colspan="2">20元</td>
+						<td colspan="2">不限</td>
+					</tr>
+					<tr>
+						<th scope="row">单笔最高金额</th>
+						<td colspan="2">10000元</td>
+						<td colspan="2">不限</td>
+					</tr>
+					<tr>
+						<th scope="row">单日最大次数</th>
+						<td colspan="2">不限</td>
+						<td colspan="2">不限</td>
+					</tr>
+					<tr>
+						<th scope="row">单日最大金额</th>
+						<td colspan="2">20000元</td>
+						<td colspan="2">不限</td>
+					</tr>
+					<tr>
+						<th scope="row">申请时间</th>
+						<td colspan="4">交易日内的08:00—03:00</td>
+					</tr>
+                                        
+					<tr>
+						<th scope="row">申请条件</th>
+						<td colspan="2">不限</td>
+						<td colspan="2">不限</td>
+					</tr>
+					<tr>
+						<th scope="row">入账时间</th>
+						<td colspan="2">T+0</td>
+                                                <td colspan="2">T+4</td>
+					</tr>
+					<tr>
+						<th scope="row">可选银行</th>
+						<td colspan="4">农业银行 工商银行 中国银行 建设银行<br>中信银行 光大银行 兴业银行(不支持信用卡、虚拟卡)</td>
+					</tr>
+					<tr>
+						<th scope="row">安全保障</th>
+						<td colspan="4">充值、提现功能采用中国银联与微信支付接口，
+							资金三方存管，存取更放心！</td>
+					</tr>
+				</tbody></table>
+			</div>
+			<!--风控规则-->
+			<div id="tableDiv4"  class="tableDiv4" style="display:none;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_table">
+					<tbody><tr class="top_title">
+						<th scope="col" width="16%">&nbsp;</th>
+						<th scope="col" width="32%">红木</th>						
+					</tr>
+					<tr>
+						<th scope="row">最小订单数</th>
+						<td>1件</td>						
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">最高订单数</th>						
+					</tr>
+					<tr>
+						<td colspan="2">每个品种允许最多下单2笔，共计4笔</td>
+					</tr>
+					<tr>
+						<th scope="row">止盈、止损</th>
+						<td colspan="2">10%、20%、30%、40%、50%、60%（默认）<br>（浮动盈亏=定金*设定值时，系统自动平仓）</td>
+					</tr>
+					
+					<tr>
+						<th scope="row">结算平仓</th>
+						<td colspan="2">由于不允许持仓过夜，因此当客户持仓到结算时间未手动平仓，则系统会为其自动平仓。</td>
+					</tr>
+					<tr>
+						<th scope="row">现金累积最大亏损</th>
+						<td colspan="2">50000元</td>
+					</tr>
+					<tr>
+					<th colspan="3" style="background:#fff; text-align:left; font-size:11px; padding:2px;">温馨提示：<br>财汇富不适合利用养老基金、债务资金（如银行贷款）等进行投资的投资者，请投资者依据自身的财务状况、承担风险能力、身体及心理承受能力等因素，自行决定是否使用财汇富。在您正式使用后，财汇富即视为您已经详尽了解了相关投资风险与交易规则，并愿意自行承担因使用财汇富带来的一切后果。</th>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

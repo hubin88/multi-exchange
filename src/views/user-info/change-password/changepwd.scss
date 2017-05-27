@@ -1,0 +1,18 @@
+@import "../../../css/_var";
+@import "../_input";
+body{
+  -webkit-user-select: none!important;
+}
+.form {
+  .password {
+    input {
+      display: inline-block;
+      width: auto;
+      padding: 0 0 0 .18rem;
+    }
+    span {
+      display: inline-block;
+      width: .75rem;
+    }
+  }
+}

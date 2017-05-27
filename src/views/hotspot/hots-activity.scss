@@ -1,0 +1,119 @@
+.celue {
+  position: fixed;
+  width: 100%;
+  z-index: 13;
+  background: #fff;
+  top: 0;
+}
+
+.hotActivity{
+  padding-top: .6rem;
+  overflow: auto;
+}
+.hots{
+  position: relative;
+  margin: 10px 1em 0;
+ li{
+   padding: .12rem 0;
+   text-align: center;
+   display: inline-block;
+   margin-left: 1em;
+   width: 30%;
+   font-size: .17rem;
+   &:first-child{
+     //border-bottom: solid 2px #2f89eb;
+     //color: #2f89eb;
+     margin-left: 0;
+   }
+   &:last-child{
+     position: absolute;
+     right: 0;
+     width: 10%;
+     font-size: .12rem;
+   }
+ }
+  .new{
+    padding: 0px 5px;
+    background-color: #ff3434;
+    color: #fff;
+    border-radius: 10px;
+    font-size: .1rem;
+    margin-left: -12px;
+    vertical-align: super;
+  }
+
+  .msg {
+    display: inline-block;
+    width: 2em;
+    position: relative;
+    span {
+      position: absolute;
+      border-radius: 50%;
+      background: #FF5757;
+      padding: 4px;
+      top: -5px;
+      right: -9px;
+    }
+    img {
+      max-width: 100%;
+      width: 22px;
+      height: 19px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.hots-activity {
+  //background: white;
+}
+.activity img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.activity {
+  clear: both;
+  overflow: hidden;
+}
+
+figure {
+  margin: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px #cecece solid;
+  border-radius: 3px;
+  .detail, .activity-time {
+    padding-top: 5px;
+    color: #a4a4a4;
+  }
+  .detail {
+    color: #100f0f;
+    font-size: .15rem;
+    padding: 4px 0;
+  }
+  .activity-time {
+    font-size: .8em;
+  }
+}
+
+.figure-title {
+  position: relative;
+  width: 100%;
+  img {
+    max-width: 100%;
+  }
+  figcaption {
+    text-align: left;
+    width: 100%;
+    background-color: rgba(60, 51, 51, .3);
+    padding: 5px 10px;
+    color: white;
+  }
+}
+.contents {
+
+}
+:global .activity-c{
+  border-bottom: 2px solid rgb(47, 137, 235);
+  color: rgb(47, 137, 235);
+}

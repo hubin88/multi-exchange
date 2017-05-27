@@ -1,0 +1,123 @@
+.content {
+  overflow: hidden;
+  margin: 1em;
+}
+
+.head {
+  position: relative;
+}
+
+.golding {
+  background: url("../../../images/gold1_2.jpg") no-repeat center center;
+}
+
+.gold {
+  background: url("../../../images/gold1_2_gray.jpg") no-repeat center center;
+}
+
+.gold, .golding {
+  padding: 10px;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+
+.golding p,
+.gold p {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.golding p {
+  color: #fcd2dc;
+}
+
+.gold p {
+  color: white;
+}
+
+.golding .h3,
+.gold .h3,
+.golding .expire,
+.gold .expire {
+  display: inline-block;
+}
+
+.h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.use-rule {
+  margin-top: 1em;
+  color: #777;
+  font-size: .8em;
+}
+
+.golding .expire {
+  color: #fede41;
+  border: solid 1px #fede41;
+}
+
+.gold .expire {
+  color: white;
+  border: solid 1px white;
+}
+
+.golding .expire,
+.gold .expire {
+  font-size: .8em;
+
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.golding .goldNum {
+  background: url("../../../images/gold1_3.png") no-repeat left center;
+}
+
+.gold .goldNum {
+  background: url("../../../images/gold1_3_gray.png") no-repeat left center;
+}
+
+.golding .goldNum,
+.gold .goldNum {
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  background-size: auto 100%;
+  width: 5em;
+  height: 3em;
+  display: table;
+}
+
+.goldNum span {
+  vertical-align: middle;
+  display: table-cell;
+  color: white;
+}
+
+.goldNum span.num {
+  font-size: 1.2em;
+  padding-left: .7em;
+  color: #bf8001;
+  font-weight: 600;
+}
+
+.gold span.num {
+  color: #666;
+}
+
+.AddNums{
+  position: absolute;
+  right: 3%;
+  top: 33%;
+}
+.noMsgTip {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: 14px;
+  color: #BBB;
+}

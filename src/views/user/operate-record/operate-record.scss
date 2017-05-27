@@ -1,0 +1,116 @@
+body{
+  overflow: hidden;
+}
+.operate-record{
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  clear: both;
+  height: 100%;
+  overflow: hidden;
+}
+:global .navs{
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  height: 45px;
+}
+
+.record-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  border: solid 1px #c8c7cc;
+  margin: 1em;
+  font-size: .9em;
+  .left, .right {
+    float: left;
+    background-color: #fff;
+    height: 1.55rem;
+  }
+  .left {
+    width: 45%;
+    padding: 1em 0 1em 1em;
+  }
+  .right {
+    width: 55%;
+    padding: 1em 1em 1em 0;
+  }
+  li {
+    margin-top: .5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 0px!important;
+    color: inherit!important;
+  }
+}
+
+li {
+  &:first-child span:not(.weight) {
+    font-size: 1.2em;
+  }
+  &:last-child{
+    text-overflow: clip;
+  }
+  span {
+    &:first-child {
+      margin-right: 5px;
+      color: #a0a0a0;
+    }
+  }
+}
+
+.tips-text {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 2px;
+  color: white !important;
+}
+
+.show-order {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  border: solid 1px #2f89eb;
+  padding: 5px;
+  color: #2f89eb;
+  border-radius: 5px;
+}
+
+.profit {
+  color: red;
+  span.tips-text {
+    background-color: red;
+  }
+}
+
+.loss {
+  color: green;
+  span.tips-text {
+    background-color: green;
+  }
+}
+
+.noMore {
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.margin50{
+  margin-top: 50px;
+}
+.iamgesli{
+  width: 18px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+.noMsgTip {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: 14px;
+  color: #BBB;
+}

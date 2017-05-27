@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <title>热门活动</title>
+    <link rel="stylesheet" href="css/hots.css">
+</head>
+<body>
+<ul id="content">
+</ul>
+</body>
+<script>
+    var ul = document.getElementById('content');
+    ajax({
+        url: "http://120.76.246.190:9004/more_trad/query_hotActivity",  //请求地址
+        type: "POST", //请求方式
+        data: {
+            params: { deptId: getQueryString('deptId'), mobile: getQueryString('mobile') },
+            version: 1
+        },        //请求参数
+        dataType: "json",
+        success: function (response, xml) {
+            var data = JSON.parse(response).result;
+            var l = data.length;
+            var html = '';
+            for (var i = 0; i < l; i++) {
+                html += '<li>' +
+                        '<div class="activity">' +
+                        '<figure>' +
+                        '<a onclick=activityUrl("' + data[i].activityUrl + '")>' +
+                        '<div class="figure-title">' +
+                        '<img src="' + data[i].activityLogo + '" alt="财汇富" />' +
+                        '<figcaption>' + data[i].activityTitle + '</figcaption>' +
+                        '</div>' +
+                        '<div class="detail">' + data[i].activityRemark + '</div>' +
+                        '<div class="activity-time">活动时间：' + data[i].activityTime + '</div>' +
+                        '</a>' +
+                        '</figure>' +
+                        '</div>' +
+                        '</li>';
+            }
+            ul.innerHTML = html;
+        },
+        fail: function (status) {
+            // 此处放失败后执行的代码
+        }
+    })
+    function getParamData() {
+        var str = window.location.href; // 取得整个地址栏
+        var num = str.indexOf('?');
+        str = str.substr(num + 1); // 取得所有参数   stringvar.substr(start [, length ]
+        var arr = str.split('&'); // 各个参数放到数组里
+        var paramData = {};
+        for (let i = 0; i < arr.length; i += 1) {
+            const n = arr[i].indexOf('=');
+            if (n > 0) {
+                var name = arr[i].substring(0, n);
+                var value = decodeURIComponent(arr[i].substr(n + 1));
+                paramData[name] = value;
+            }
+        }
+        return paramData;
+    }
+    ;
+    window.ParamData = getParamData();
+
+    function ajax(options) {
+        options = options || {};
+        options.type = (options.type || "GET").toUpperCase();
+        options.dataType = options.dataType || "json";
+        var params = JSON.stringify(options.data);
+
+        //创建 - 非IE6 - 第一步
+        if (window.XMLHttpRequest) {
+            var xhr = new XMLHttpRequest();
+        } else { //IE6及其以下版本浏览器
+            var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        //连接 和 发送 - 第二步
+        if (options.type == "GET") {
+            xhr.open("GET", options.url + "?" + params, true);
+            xhr.send(null);
+        } else if (options.type == "POST") {
+            xhr.open("POST", options.url, true);
+            //设置表单提交时的内容类型
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(params);
+        }
+
+        //接收 - 第三步
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                var status = xhr.status;
+                if (status >= 200 && status < 300) {
+                    options.success && options.success(xhr.responseText, xhr.responseXML);
+                } else {
+                    options.fail && options.fail(status);
+                }
+            }
+        }
+
+    }
+    function getQueryString(name) {
+        const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`, 'i');
+        const r = location.search.substr(1).match(reg);
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null;
+    }
+    function activityUrl(e) {
+        const url = 'http://' + e;
+        callNative(window['executeNative'], {
+            conmmad: url,
+        });
+    }
+
+    function formatJsonArgs(args) {
+        var command = {
+            command: args.command,
+            params: args.params ? args.params : {},
+        };
+        return JSON.stringify(command);
+    }
+
+    // js 调用 native
+    function callNative(funName, args) {
+        try {
+            var formatArgs = formatJsonArgs(args);
+            if (typeof (android) === 'undefined') {
+                window.webkit.messageHandlers[funName].postMessage(formatArgs);
+            } else {
+                window.android[funName](formatArgs);
+            }
+        } catch (e) {
+            console.log(`js 调用 native${e}`);
+        }
+    }
+
+</script>
+</html>

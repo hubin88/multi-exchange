@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* CSS Document */
+img {
+    border: none;
+    vertical-align: middle;
+    width: 100%
+}
+
+li {
+    list-style-type: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    font-family: "黑体";
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0;
+}
+
+* html .clearfix:after {
+    height: 1%;
+}
+
+/*IE hack*/
+.clearfix {
+    *zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.strategy {
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+}
+
+.title {
+    width: 100%;
+    background: #212d49;
+}
+
+.title b {
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.title p {
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 12px;
+    margin-right: 11px;
+}
+
+.varieties {
+    width: 94%;
+    margin: 3%;
+}
+
+.varieties .top {
+    width: 100%;
+    margin-bottom: 2%
+}
+
+.varieties .top .l {
+    width: 12.3%;
+    background: #212d49;
+    text-align: center;
+}
+
+.varieties .top .l p {
+    line-height: 100px;
+    height: 100px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.varieties .top .writte {
+    width: 83%;
+    float: right;
+    border: 1px solid #1b263f;
+    padding: 1% 2% 0% 2%;
+    height: 95px;
+
+}
+
+.varieties .top .writte p {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content {
+    width: 92%;
+    margin-top: 25px;
+    color: #f5f5f5;
+    padding: 0 4%;
+    padding-bottom: 12%;
+}
+
+.content b {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content p {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content .silver {
+    width: 96%;
+    margin: 13px 0 0 11px;
+}
+
+.content .profit {
+    width: 93%;
+    margin: 12px 0 0 6px;
+}
+
+.content .profit span {
+    color: #f5f5f5;
+    margin-top: 3px;
+}
+
+.content .profit p {
+    line-height: 27px;
+    color: #f5f5f5;
+    font-size: 14px;
+    margin-left: 9px;
+}
+
+.content .profit p.p {
+    margin-left: -1px;
+}
+
+.fotter {
+    width: 96%;
+    margin-top: 19px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #212d49;
+    height: 40px;
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 13px;
+    padding: 0 2%
+
+}
+
+.fotter img {
+    width: 100%;
+}
+
+p.next {
+    margin-top: 10px;
+}
+
+.content .asphalt p.two {
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    .content .asphalt b {
+        font-size: 16px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 16px !important;
+    }
+
+    .content .silver b {
+        font-size: 16px !important;
+    }
+
+    .content .silver p {
+        font-size: 16px !important;
+    }
+
+    .content .asphalt {
+        margin: 13px 0 0 8px !important;
+    }
+
+    .content .silver {
+        margin: 13px 0 0 8px !important;
+    }
+
+    .content .profit p {
+        font-size: 16px !important;
+    }
+
+    .content .profit span {
+        margin-top: 4px !important;
+    }
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+    .title b {
+        font-size: 17px !important;
+    }
+
+    .title p {
+        font-size: 14px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 14px !important;
+    }
+
+    .varieties .top .l p {
+        font-size: 17px !important;
+        line-height: 105px !important;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 17px !important;
+        line-height: 105px !important;
+    }
+
+    .varieties {
+        margin-left: 14px !important;
+    }
+
+    .varieties .top .l p {
+        height: 105px
+    }
+
+    .varieties .top .writte p {
+        font-size: 17px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 17px !important;
+    }
+
+    .content .asphalt b {
+        font-size: 18px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 18px !important;
+    }
+
+    .content .silver b {
+        font-size: 18px !important;
+    }
+
+    .content .silver p {
+        font-size: 18px !important;
+    }
+
+    .content .asphalt {
+        margin: 13px 14px 0 14px !important;
+    }
+
+    .content .silver {
+        margin: 13px 0 0 9px !important;
+    }
+
+    .content .profit p {
+        font-size: 18px !important;
+    }
+
+    .content .profit span {
+        margin-top: 4px !important;
+    }
+
+    p.next {
+        margin-top: 20px !important;
+    }
+
+    .content .asphalt p.two {
+        margin-bottom: 20px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 1% 2% 0% 2% !important;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .content {
+        margin-top: 38px !important;
+    }
+
+    .title b {
+        font-size: 24px !important;
+        line-height: 64px !important;
+    }
+
+    .title p {
+        font-size: 20px !important;
+        line-height: 64px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 20px !important;
+    }
+
+    .varieties .top .l p {
+        font-size: 20px !important;
+        line-height: 90px !important;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 20px !important;
+        line-height: 90px !important;
+    }
+
+    .varieties {
+        margin-left: 42px !important;
+        margin-top: 22px !important;
+    }
+
+    .varieties .top .writte p {
+        font-size: 24px !important;
+        line-height: 40px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 24px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt b {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .silver b {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .silver p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt {
+        margin: 22px 14px 0 14px !important;
+    }
+
+    .content .silver {
+        margin: 22px 0 0 17px !important;
+    }
+
+    .content .profit p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .profit span {
+        margin-top: 5px !important;
+        font-size: 26px !important;
+    }
+
+    .content .profit {
+        margin-top: 22px !important;
+    }
+
+    .content .asphalt p.two {
+        margin-bottom: 20px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 0% 4% 0% 4% !important;
+        height: 90px;
+    }
+
+}
+
+@media screen and (min-width: 416px) and (max-width: 1440px) {
+    .varieties .top .l p {
+        font-size: 18px !important;
+        line-height: 85px !important;
+        height: 92px;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 18px !important;
+        line-height: 85px !important;
+    }
+
+    .varieties {
+        margin: 20px 0 0 25px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 14px !important;
+    }
+
+    .varieties .top .writte p {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 0% 2% 0% 2% !important;
+        height: 90px;
+    }
+}

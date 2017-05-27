@@ -1,0 +1,39 @@
+//@import '../css/var';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  height: 100%;
+  .cell {
+    word-break: normal;
+    word-wrap: break-word;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.dialog {
+  width: 90%;
+  //box-shadow: 0 .08rem 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 1rem;
+  background: #fff;
+}

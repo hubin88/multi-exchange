@@ -1,0 +1,59 @@
+@import "../../_valViews";
+
+html {
+  font-size: 625%; /*10 ÷ 16 × 100% = 62.5%*/
+}
+.scroll-page {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.page-wrap {
+  width: 100%;
+  height: 100%;
+  //border: solid 1px red;
+  //transition: transform 300ms;
+}
+
+.page-bg {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+
+.pageBtnBox{
+  width: 100%;
+  position: absolute;
+  bottom: .9rem;
+  text-align: center;
+}
+.page-btn {
+  border: solid 1px #dad7d7;
+  padding: .1rem;
+  width: 68%;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+.page-bg img{
+  width: 100%;
+}
+
+
+@for $idx from 0 through 3 {
+  .page-bg-#{$idx} {
+    background-image: url('../../../images/help/help_na#{$idx+1}.png'),
+  }
+}
+
+

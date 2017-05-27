@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+  font-size: 625%;
+}
+
+body {
+  font-family: Roboto, helvetica, arial, sans-serif;
+  font-size: .12rem;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
+li {
+  list-style: none;
+}
+
+.hotActivity{
+  padding-top: .6rem;
+  overflow: auto;
+}
+.hots {
+  position: relative;
+  margin: 10px 1em 0;
+}
+.activity img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.activity {
+  clear: both;
+  overflow: hidden;
+}
+figure {
+  margin: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px #cecece solid;
+  border-radius: 3px;
+}
+.detail, .activity-time {
+  padding-top: 5px;
+  color: #a4a4a4;
+}
+.detail {
+  color: #100f0f;
+  font-size: .15rem;
+  padding: 4px 0;
+}
+.activity-time {
+  font-size: .8em;
+}
+
+.figure-title {
+  position: relative;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
+figcaption {
+  text-align: left;
+  width: 100%;
+  background-color: rgba(60, 51, 51, .3);
+  padding: 5px 10px;
+  color: white;
+}
+.activity-c{
+  border-bottom: 2px solid rgb(47, 137, 235);
+  color: rgb(47, 137, 235);
+}
+.noMsgTip {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: 14px;
+  color: #BBB;
+
+}

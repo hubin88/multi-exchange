@@ -1,0 +1,61 @@
+@import "../../../css/_var";
+@import "../_input";
+
+.register-box {
+  position: relative;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  transition: left .6s;
+  & > div {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 50%;
+  }
+  .register {
+    left: 0;
+    padding-top: .1rem;
+  }
+}
+
+.code-btn {
+  display: inline-block;
+  width: .8rem !important;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 60%;
+  line-height: 100%;
+  font-size: .12rem;
+  padding: 0 .05rem !important;
+  border-radius: .05rem;
+  color: $buttonBorderColor !important;
+  border: .01rem solid $buttonBorderColor;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.agreement {
+  .no-bottom-line {
+    margin-left: .05rem;
+    border: none;
+    .text {
+      color: $buttonBorderColor;
+    }
+  }
+  & > * {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.tips {
+  text-align: center;
+  color: $inputColor;
+  font-size: .12rem;
+  span {
+    color: red;
+  }
+}

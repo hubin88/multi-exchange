@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+img{ border:none; vertical-align:middle;}
+li{ list-style-type:none;}
+*{ padding:0; margin:0; font-size:12px;}
+body{ width:100%; height:100%;font-family: 微软雅黑}
+.clearfix:after{ content: "."; display: block; height: 0; clear: both; font-size:0; }
+*html .clearfix:after{ height: 1%; }/*IE hack*/
+.clearfix{ *zoom:1;}
+.left{ float:left;}
+.right{ float:right;}
+.absolute{ position:absolute;}
+.relative{ position:relative;}
+a{ text-decoration:none;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+.selectGoods{
+	margin-bottom: 10px;
+}
+.selectActiove{
+	color: #fff;
+	border: blue;
+}
+iframe{
+	width: 100%;
+	/*height: 100%;*/
+}
+/*财汇富规则*/
+.rule_box{ max-width:640px; min-width:320px; width:100%; margin:0 auto; padding:0;}
+.rule_top img{ width:100%;}
+.gz_cont{ background-color:#ebe1d8;}
+.gz_tit{ background-color:#FFF;}
+.gz_tit li{ width:25%; float:left;}
+.gz_tit li a{ width:99%; height:38px; line-height:38px; background-color:#FFF; text-align:center; font-size:14px; color:#333333; display:block; border-right:#999999 1px solid;}
+.gz_tit .gz_on{ position:relative;}
+.bordr-m li a{
+	border-right:none;
+}
+.gz_tit .gz_on a{ background:url(../images/gz_bj1.png) repeat-x; border:none; font-size:16px; color:#FFF;}
+.gz_tit .gz_ons a{
+	color: #0e46c7;
+	font-size: 16px;
+	border-bottom: 2px #0e46c7 solid;
+}
+.gz_tit li .jiantou{ width:23px; height:9px; position:absolute; left:50%; bottom:-4px; margin-left:-11px; }
+.gz_tit .bor_no{ border:none;}
+.rule_table{ background-color:#FFF; border-bottom:#666666 1px solid; border-left:#666666 1px solid;}
+.rule_table tr th,.rule_table tr td{ padding:5px 0; line-height:18px; border-top:#666666 1px solid; border-right:#666666 1px solid; font-weight:normal; text-align:center;}
+.rule_table tr th{ background-color:#f2f2f2; font-size:13px; color:#121212;height: 25px;}
+.rule_table .top_title th{ font-size:14px; color:#FFF; background-color:#47597f;}
+.rule_table tr .hong{ font-size:13px; color:#d74040;}
+.rule_table tr td span{ font-size:10px;}
+.gz_blo1,.gz_blo2{ padding:5% 3%;}
+.gz_blo2{ background-color:#ffffff;}
+.gz_blo2 img{ width:100%; border-bottom:#cccccc 1px dashed; padding:3% 0;}
+.blo2_tit img{ border:none; padding-top:0;}
+.bor_no img{ border:none; padding-bottom:1%;}
+.footer{ background-color:#e8e8e8; height:30px; line-height:30px; text-align:center; font-size:11px; color:#666666;}
+
+.intro{
+	padding: 1em;
+	background-color: #eaeaea;
+}
+.intro b{
+	font-size: 1.1em;
+}
+.left2{
+	text-indent:2em;
+}
+.white{
+	background-color: #fff;
+}

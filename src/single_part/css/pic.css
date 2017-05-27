@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{ list-style-type:none;}
+.deal li{
+	height: 30px;
+}
+.deal span{
+	display: block;
+	height: 5px;
+	float: left;
+}
+.name{
+	float: left;
+	width: 6em;
+}
+.deal .left{
+	background-color: #ff1131;
+	margin-left: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.red {
+	color: #ff1131;
+}
+.deal .nameNum{
+	width: 2em;
+}
+.deal .right{
+	background-color: #b9fc00;	
+	margin-right: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.deal .left, .deal .right{
+	margin-top: 6px;
+}
+.yellow{	
+	color: #b9fc00;
+}

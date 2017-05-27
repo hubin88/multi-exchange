@@ -1,0 +1,26 @@
+@import "../../../css/_var";
+
+.register-success {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: .1rem .2rem;
+  font-size: .14rem;
+  span {
+    color: $buttonBorderColor;
+  }
+  .title {
+    padding: .2rem 0;
+  }
+  .content {
+    padding-bottom: .2rem;
+  }
+  .entry-home {
+    height: .3rem;
+    text-align: right;
+    span {
+      display: inline-block;
+      height: 100%;
+      line-height: .3rem;
+    }
+  }
+}

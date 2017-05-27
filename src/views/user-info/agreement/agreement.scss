@@ -1,0 +1,96 @@
+@import "../../../css/_var";
+
+.agreement {
+  right: 0;
+  padding-top: .1rem;
+  padding-bottom: .6rem;
+  height: 100%;
+  z-index: 99;
+  ul {
+    padding: 0 .128rem;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .content {
+    overflow: hidden;
+    .title-content {
+      margin: .1rem 0;
+      height: .3rem;
+      font-size: .14rem;
+      line-height: .3rem;
+      padding-right: .25rem;
+      background-image: url("../../../images/down.png");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: auto 30%;
+      font-weight: bold;
+    }
+    .detailed {
+      font-size: .14rem;
+      word-break: normal;
+      word-wrap: break-word;
+      text-align: justify;
+    }
+  }
+}
+
+.title {
+  display: table;
+  width: 100%;
+  height: .4rem;
+  font-size: .16rem;
+  font-weight: bold;
+  background-color: #ebebeb;
+  span {
+    display: table-cell;
+    height: .4rem;
+    line-height: .4rem;
+  }
+}
+
+.is-agree {
+  width: .25rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url('../../../images/agree.png') no-repeat center center/100% auto,
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: .6rem;
+  padding: .1rem 0;
+  background: #fff;
+  z-index: 999;
+  input {
+    width: 92%;
+    margin: 0 auto;
+    display: block;
+    height: .4rem;
+    background: $buttonBorderColor;
+    border-radius: .05rem;
+    color: #fff;
+  }
+  .no-pass {
+    background: $notAllowedBgColor;
+    color: $notAllowedtextColor;
+  }
+}
+
+:global .deletJpg {
+  width: .25rem;
+  background-image: url("../../../images/delete.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% auto;
+}
+
+:global .agreeJpg {
+  width: .25rem;
+  background-image: url("../../../images/agree.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}

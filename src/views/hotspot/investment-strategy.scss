@@ -1,0 +1,57 @@
+.investment-strategy {
+  height: 100%;
+  overflow: auto;
+}
+
+.celue {
+  position: absolute;
+  width: 100%;
+  height: 42px;
+  z-index: 13;
+  background: #fff;
+  top:0;
+}
+
+.hots {
+  padding: 0 1em;
+
+  li {
+    padding: 1em 0;
+    text-align: center;
+    display: inline-block;
+    margin-left: 1em;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:nth-of-type(2) {
+      border-bottom: solid 2px #2f89eb;
+      color: #2f89eb;
+    }
+
+    &:last-child {
+      position: absolute;
+      right: 1em;
+    }
+  }
+  .msg {
+    display: inline-block;
+    width: 2em;
+    position: relative;
+    span {
+      position: absolute;
+      border-radius: 50%;
+      background: #FF5757;
+      padding: 4px;
+      top: -5px;
+      right: -9px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
+
+.widthO{
+  width: 100%;
+}

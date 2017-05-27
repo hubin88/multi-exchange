@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE"><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"><title>热点</title><style type="text/css">
+img {
+    border: none;
+    vertical-align: middle;
+    /*width: 100%*/
+}
+
+li {
+    list-style-type: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    -webkit-user-select: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {
+    margin: 0;
+    padding: 0px;
+}
+/*html,body{*/
+    /*overflow: auto!important;*/
+/*}*/
+body {
+    width: 100%;
+    height: 100%;
+    /*background: #000000;*/
+    font-family: "\9ED1\4F53";
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0;
+}
+
+* html .clearfix:after {
+    height: 1%;
+}
+#investmentStrategy{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    overflow: auto;
+}
+
+/*IE hack*/
+.clearfix {
+    *zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.strategy {
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+}
+
+.title {
+    width: 100%;
+    background: #212d49;
+}
+
+.title b {
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.title p {
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 12px;
+    margin-right: 11px;
+}
+
+.varieties {
+    width: 94%;
+    margin: 3%;
+}
+
+.varieties .top {
+    width: 100%;
+    margin-bottom: 2%
+}
+
+.varieties .top .l {
+    width: 12.3%;
+    background: #212d49;
+    text-align: center;
+}
+
+.varieties .top .l p {
+    line-height: 100px;
+    height: 100px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.varieties .top .writte {
+    width: 83%;
+    float: right;
+    border: 1px solid #1b263f;
+    padding: 1% 2% 0% 2%;
+    height: 95px;
+
+}
+
+.varieties .top .writte p {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content {
+    /*width: 92%;*/
+    margin-top: 25px;
+    color: #f5f5f5;
+    padding: 0 4%;
+    padding-bottom: 12%;
+}
+.content img{
+    width: 100%;
+}
+.content b {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content p {
+    line-height: 24px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.content .silver {
+    width: 96%;
+    margin: 13px 0 0 11px;
+}
+
+.content .profit {
+    width: 93%;
+    margin: 12px 0 0 6px;
+}
+
+.content .profit span {
+    color: #f5f5f5;
+    margin-top: 3px;
+}
+
+.content .profit p {
+    line-height: 27px;
+    color: #f5f5f5;
+    font-size: 14px;
+    margin-left: 9px;
+}
+
+.content .profit p.p {
+    margin-left: -1px;
+}
+
+.fotter {
+    width: 100%;
+    margin-top: 19px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #212d49;
+    height: 40px;
+    line-height: 40px;
+    color: #f5f5f5;
+    font-size: 13px;
+    padding: 0 2%
+}
+
+.fotter img {
+    width: 100%;
+}
+
+p.next {
+    margin-top: 10px;
+}
+
+.content .asphalt p.two {
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    .content .asphalt b {
+        font-size: 16px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 16px !important;
+    }
+
+    .content .silver b {
+        font-size: 16px !important;
+    }
+
+    .content .silver p {
+        font-size: 16px !important;
+    }
+
+    .content .asphalt {
+        margin: 13px 0 0 8px !important;
+    }
+
+    .content .silver {
+        margin: 13px 0 0 8px !important;
+    }
+
+    .content .profit p {
+        font-size: 16px !important;
+    }
+
+    .content .profit span {
+        margin-top: 4px !important;
+    }
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+    .title b {
+        font-size: 17px !important;
+    }
+
+    .title p {
+        font-size: 14px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 14px !important;
+    }
+
+    .varieties .top .l p {
+        font-size: 17px !important;
+        line-height: 105px !important;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 17px !important;
+        line-height: 105px !important;
+    }
+
+    .varieties {
+        margin-left: 14px !important;
+    }
+
+    .varieties .top .l p {
+        height: 105px
+    }
+
+    .varieties .top .writte p {
+        font-size: 17px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 17px !important;
+    }
+
+    .content .asphalt b {
+        font-size: 18px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 18px !important;
+    }
+
+    .content .silver b {
+        font-size: 18px !important;
+    }
+
+    .content .silver p {
+        font-size: 18px !important;
+    }
+
+    .content .asphalt {
+        margin: 13px 14px 0 14px !important;
+    }
+
+    .content .silver {
+        margin: 13px 0 0 9px !important;
+    }
+
+    .content .profit p {
+        font-size: 18px !important;
+    }
+
+    .content .profit span {
+        margin-top: 4px !important;
+    }
+
+    p.next {
+        margin-top: 20px !important;
+    }
+
+    .content .asphalt p.two {
+        margin-bottom: 20px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 1% 2% 0% 2% !important;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .content {
+        margin-top: 38px !important;
+    }
+
+    .title b {
+        font-size: 24px !important;
+        line-height: 64px !important;
+    }
+
+    .title p {
+        font-size: 20px !important;
+        line-height: 64px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 20px !important;
+    }
+
+    .varieties .top .l p {
+        font-size: 20px !important;
+        line-height: 90px !important;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 20px !important;
+        line-height: 90px !important;
+    }
+
+    .varieties {
+        margin-left: 42px !important;
+        margin-top: 22px !important;
+    }
+
+    .varieties .top .writte p {
+        font-size: 24px !important;
+        line-height: 40px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 24px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt b {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .silver b {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .silver p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .asphalt {
+        margin: 22px 14px 0 14px !important;
+    }
+
+    .content .silver {
+        margin: 22px 0 0 17px !important;
+    }
+
+    .content .profit p {
+        font-size: 20px !important;
+        line-height: 40px !important;
+    }
+
+    .content .profit span {
+        margin-top: 5px !important;
+        font-size: 26px !important;
+    }
+
+    .content .profit {
+        margin-top: 22px !important;
+    }
+
+    .content .asphalt p.two {
+        margin-bottom: 20px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 0% 4% 0% 4% !important;
+        height: 90px;
+    }
+
+}
+
+@media screen and (min-width: 416px) and (max-width: 1440px) {
+    .varieties .top .l p {
+        font-size: 18px !important;
+        line-height: 85px !important;
+        height: 92px;
+    }
+
+    .varieties .bottom .l p {
+        font-size: 18px !important;
+        line-height: 85px !important;
+    }
+
+    .varieties {
+        margin: 20px 0 0 25px !important;
+    }
+
+    .varieties .bottom {
+        margin-top: 14px !important;
+    }
+
+    .varieties .top .writte p {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+
+    .varieties .bottom .writte p {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+
+    .varieties .top .writte {
+        padding: 0% 2% 0% 2% !important;
+        height: 90px;
+
+    }
+}</style>
+</head>
+	
+<body>
+	<div id="investmentStrategy">
+		<div class="strategy"><div class="title clearfix"><b class="left">【早间策略】</b>
+			<p class="right" id="times"></p></div><div class="varieties"><div class="top clearfix"><div class="l left"><p>红木</p></div><div class="writte"><p>红木3850-3870布局空单，止损3890，止盈3800；3680-3700布局多单，止损3660，止盈3750；支撑位3650 3700，压力位3800 3850。</p></div></div></div><div class="content"><p>红木：周四亚盘震荡下行，欧盘延续亚盘走势，逼近前期低点，美盘时段转为上涨，日内整体波动幅度巨大， 操作空间十分可观，日内整体震荡趋势为主，有出现箱体迹象。</p><p>&nbsp;</p><p><img alt="" src="images/19173440vdnf.png"></p><div><p>基本面：根据尼日利亚联邦共和国环境部长哈吉亚·阿米娜·莫哈米德（Hajia Amina Mohammed）的要求，该国政府已经停止了签发濒危野生动植物种国际贸易公约（CITES）许可证的工作， 原因是该国的非法木材采伐目前已经不可控制， 且森林资源的开采和野生动植物种的经营都是处于不可持续经营状态。 环境部长称不再颁发CITES许可的工作状态从2017年1月即已经开始，将会至少持续到3月， 直到政府寻求到一个稳妥的解决方案。在南非约翰内斯堡, 联合国濒危野生动植物国际贸易公约(CITES，也称华盛顿公约)的缔约国召开第十七届缔约方大会。此次会议上， 缔约国代表讨论并通过了多项与红木产业相关的内容。 缔约方大会对我国红木市场上常用的几大红木主力原材料均进入国际管制， 红木材料来源急剧减少，红木进口与运输成本迅速上涨。与此同时，红木行业似乎还处于盘整阶段， 整体行情相对冷清，市场上红木价格与材料倒挂的现象比较普遍，令行情显得扑朔迷离。 红木行业2017年的行情走势将会如何?红木是否值得收藏?目前的市场是回暖的前奏， 还是新一轮下跌的拐点?这是众多投资者以及生产企业都很关注的问题。根据供求关系和物以希为贵原则， 红木材料市场回暖机会很大，对红木未来行情充满信心。</p><p>&nbsp;</p><p>技术面：技术上，日线级别来看，收出一根小阴线，行情在支撑位附近徘徊多日。 短周期上，30和60分钟图中看，涨跌幅度均较大。日内操作仍可结合操作，高空低多。</p></div><p><img alt="" src="images/051027199r07.png"></p><p>① 17:00 欧元区12月季调后经常帐</p><p>② 17:30 英国1月季调后零售销售月率</p><p>③ 23:00 美国1月谘商会领先指标月率</p><p>④ 次日02:00 美国至2月17日当周石油钻井总数</p></div></div></div></div><center class="fotter">以上策略观点仅供参考，请自主下单，自负盈亏</center>
+</body>
+<script type="text/javascript">
+	var time = new Date();
+    var month = time.getMonth() + 1;
+    if (month < 10) {
+      month = '0' + month;
+    }
+    var day = time.getDate();
+    if (day < 10) {
+      day = '0' + day;
+    }
+    var nowTime = time.getFullYear() + '-' + month + '-' +day;
+    document.getElementById('times').innerHTML = nowTime;
+</script>
+</html>
